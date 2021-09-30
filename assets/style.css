@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #a6a6a6;
+    color: white;
+    font-family: 'Paytone One', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* navbar */
+nav{
+    display: flex;
+    background-color: #E53167;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+}
+nav h4{
+    font-size: 25px;
+}
+nav ul{
+    display: flex;  
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+
+    }
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    
+
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 43px;
+    height: 28px;
+    opacity: 0;
+    left: -7px;
+    top: -3px;
+    z-index: 1;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+
+}
+
+.container{
+    padding: 0 10%;
+    top: 0;
+    position: relative;
+    height: 650px;
+    background-color: #f3f3f3;
+
+}
+
+.container h1{
+position: relative;
+padding-top: 175px;
+color: #E53167;
+font-size: 60px;
+}
+
+.container p{
+color: #555;
+font-size: 18px;
+font-weight: 500;
+}
+
+.container img{
+right: 10%;
+position: absolute;
+width: 100%;
+max-width: 500px;
+height: auto;
+top: 20px;
+opacity: 0;
+}
+
+.container input[type=text]{
+	width: 100%;
+    max-width: 450px;
+	margin-top: 30px;
+	padding: 15px 24px;
+	border-radius: 50px;
+	border: 1px solid #ccc;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+
+.popup{
+    position: absolute;
+    top: -150%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background-color: #E53167;
+    box-shadow: 2px 2px 5px 5px rgb(0,0,0,0,15);
+    border-radius: 10px; 
+    opacity: 0;
+    transition: top 0ms ease-in-out 200ms;
+}
+
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    z-index: 1;
+    transition: top 0ms ease-in-out 200ms;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup .form h2{
+    text-align: center;
+    color: #fff;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup .form .form-element{
+    margin: 15px 0px;
+}
+
+.popup .form .form-element label{
+    font-size: 14px;
+    color: #fff;
+}
+
+.popup .form .form-element input{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.popup .form .form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #555;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.popup .form .form-element button:hover{
+    background:rgb(70, 69, 69);
+}
+main{
+    background-color: #f3f3f3;
+    margin-top: -30px;
+    padding: 10px;
+}
+
+.title{
+    text-align: center;
+    font-size: 35px;
+    color: #E53167;
+    margin: 30px 0 50px;
+}
+.flex{
+    display: flex;
+    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 275px;
+	height: auto;
+	background-color: white;
+	border-radius: 20px;
+ 	box-shadow: 5px 10px 18px #888888;
+     margin: 10px;
+     padding: 30px;
+ }
+
+ .card img{
+    width: 100%;
+	height: 180px;
+	object-fit: cover;
+	position: relative;
+	border-radius: 10px;
+	border:1px solid #ccc;
+ }
+
+ .card h3{
+     font: 20px;
+     text-align: center;
+     color: #E53167;
+     margin: 10px;
+ }
+
+ .card p{
+     font: 15px;
+     color: #555;
+     font-family: sans-serif;
+ }
+
+ .card:hover{
+     background-color:#d4d3d3;
+     cursor: pointer;
+     transform: scale(1.05);
+     transition: all 0.5s;
+ }
+
+ aside{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: #fff;
+     margin-top: 10px;
+     
+ }
+ #portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 10px;
+    
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 10px;
+    
+}
+.contact{
+    color: #000;
+    }
+.portfolio{
+color: #000;
+}
+ .team{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 10px;
+    
+}
+
+ aside .card{
+     width: 450px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+ }
+
+ aside .card img{
+     border-radius: 50%;
+     width: 150px;
+     
+ }
+aside ul li{
+    font-family: 'Paytone One', sans-serif;
+    color: #555;
+}
+
+ aside .card p{
+     margin: 10px;
+    }
+
+    footer{
+        padding: 20px;
+        color: white;
+        background-color: gray;
+        text-align: center;
+        font-weight: light;
+    }
+
+
+@media screen and (max-width: 768px) {
+    nav ul{
+        width: 50%;
+    }
+
+    .container img{
+       display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display: flex;
+        
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 20px;
+        height: 80vh;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #E53167;
+        width: 50%;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 1s;
+        z-index: 1; 
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+        
+    }
+    .container img{
+        display: none;
+     }
+    
+}
+
+@media screen and (min-width: 1200px){
+.container img{
+    opacity: 1;
+}
+}
+
+
